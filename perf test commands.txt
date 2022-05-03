@@ -1,0 +1,15 @@
+*Clone a restaurant*
+./gradlew -PusingLeakCanary=false -PusingEspressoMocks=false -PinstrumentationRunner=com.toasttab.pos.ToastAndroidJUnitRunner connectedPreproductionDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.toasttab.pos.performance.CreateRestaurantWithDitto
+
+*build and install*
+./gradlew installPreproductionDebug installPreproductionDebugAndroidTest
+
+*run perf test*
+./gradlew -PusingLeakCanary=false -PusingEspressoMocks=false -PinstrumentationRunner=com.toasttab.pos.ToastAndroidJUnitRunner connectedPreproductionDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.toasttab.pos.performance.GeneralTestFLEXA9
+
+*Permissions*
+adb shell pm grant com.toasttab.pos android.permission.WRITE_EXTERNAL_STORAGE
+adb shell pm grant com.toasttab.pos android.permission.READ_EXTERNAL_STORAGE
+adb shell pm grant com.toasttab.pos android.permission.ACCESS_FINE_LOCATION
+adb shell pm grant com.toasttab.pos android.permission.ACCESS_COARSE_LOCATION
+adb shell pm grant com.toasttab.pos android.permission.READ_PHONE_STATE
