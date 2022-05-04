@@ -12,3 +12,5 @@ adb shell pm grant com.toasttab.pos android.permission.ACCESS_FINE_LOCATION
 adb shell pm grant com.toasttab.pos android.permission.ACCESS_COARSE_LOCATION
 adb shell pm grant com.toasttab.pos android.permission.READ_PHONE_STATE
 ./gradlew -PusingLeakCanary=false -PusingEspressoMocks=false -PinstrumentationRunner=com.toasttab.pos.ToastAndroidJUnitRunner connectedPreproductionDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.toasttab.pos.performance.$script
+echo "press any key to exit"
+read close
